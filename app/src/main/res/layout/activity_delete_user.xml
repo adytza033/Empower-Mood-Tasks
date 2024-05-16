@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/background_image1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="getUserdetailsForm"
+                app:srcCompat="@drawable/baseline_arrow_back_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/logo1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="200dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="340dp"
+                        android:layout_height="60dp"
+                        android:text="Are you sure you want to delete this account?"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editTextUserEmailDeleteAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:drawableLeft="@drawable/baseline_email_24"
+                        android:drawablePadding="10dp"
+                        android:enabled="false"
+                        android:hint="Email"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="15dp"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonDeleteYes"
+                            android:layout_width="120dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:alpha="0.9"
+                            android:onClick="deleteAccount"
+                            android:text="YES"
+                            android:textSize="30dp"
+                            app:backgroundTint="@color/dark_blue" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonDeleteNo"
+                            android:layout_width="120dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="30dp"
+                            android:alpha="0.9"
+                            android:onClick="getUserdetailsForm"
+                            android:text="NO"
+                            android:textSize="30dp"
+                            app:backgroundTint="@color/dark_blue" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

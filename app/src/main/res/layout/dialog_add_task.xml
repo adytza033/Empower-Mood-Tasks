@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/inputDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task Description"
+        android:minHeight="48dp"
+        android:importantForAutofill="no"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Due Date"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a priority"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/priorityLow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_flag_yellow"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="low_priority"/>
+
+        <ImageView
+            android:id="@+id/priorityMedium"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_flag_orange"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="medium_priority"/>
+
+        <ImageView
+            android:id="@+id/priorityHigh"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_flag_24"
+            android:contentDescription="high_priority"/>
+    </LinearLayout>
+
+</LinearLayout>

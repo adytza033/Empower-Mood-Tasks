@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple2"
+    tools:context=".DiaryFolder">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/background_image1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:onClick="menuPage"
+                app:srcCompat="@drawable/baseline_menu_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="Daily Quiz"
+                android:textColor="@color/dark_blue"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="This form can be completed daily to
+help you track your progress and achieve your goals."
+            android:textColor="@color/dark_blue"
+            android:textSize="19sp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:layout_margin="5dp"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Satisfaction of progress"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/editTextSatisfaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/questions_bg"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="What are you satisfied about today?"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Grateful"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/editTextGrateful"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/questions_bg"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="What are you grateful for today?"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Goal"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/editTextGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/questions_bg"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="What is your goal for today / tomorrow?"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Mood"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/questions_bg"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/face1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_sad_face_24" />
+                    <ImageView
+                        android:id="@+id/face2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_sentiment_sad2_24" />
+                    <ImageView
+                        android:id="@+id/face3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_sentiment_neutral_24" />
+                    <ImageView
+                        android:id="@+id/face4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_sentiment_happy_24" />
+                    <ImageView
+                        android:id="@+id/face5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_sentiment_very_happy_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/SaveDiary"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.85"
+                        android:gravity="center"
+                        android:onClick="saveDailyQuestions"
+                        android:text="Save"
+                        android:textSize="25sp"
+                        app:backgroundTint="@color/light_purple" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.85"
+                        android:gravity="center"
+                        android:text="Burn"
+                        android:onClick="burnDailyQEntry"
+                        android:textSize="25sp"
+                        app:backgroundTint="@color/light_purple" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
